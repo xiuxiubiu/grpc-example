@@ -1,0 +1,22 @@
+syntax = "proto3";
+option go_package="github.com/xiuxiubiu/grpc-example/grpc-gateway/proto";
+package proto;
+
+import "google/api/annotations.proto";
+
+service Greeter {
+	rpc SayHello(HelloRequest) returns (HelloResponse) {
+		option (google.api.http) = {
+			post: "/v1/example/sayHello",
+			body: "*"
+		};
+	}
+}
+
+message HelloRequest {
+	string name = 1;
+}
+
+message HelloResponse {
+	string message = 1;
+}
