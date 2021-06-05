@@ -35,7 +35,7 @@ $ go install \
 * `protoc-gen-go-grpc`
   
 
-### 使用[buf](https://buf.build)编译proto
+### 使用 [buf](https://buf.build) 编译proto
 
 ---
 
@@ -115,7 +115,7 @@ $ curl -H "Context-Type:application/json" -X POST --data '{"name": "grpc-gateway
 {"message":"Hello grpc-gateway"}
 ```
 
-使用`grpcui`测试gRPC请求
+使用 [grpcui](https://github.com/fullstorydev/grpcui) 测试gRPC请求
 ```shell
 $ grpcui -plaintext 127.0.0.1:8181
 ```
