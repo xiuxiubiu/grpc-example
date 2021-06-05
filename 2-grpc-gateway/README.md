@@ -102,6 +102,8 @@ $ protoc --proto_path=. --proto_path=/googleapis \
 
 ### 请求服务
 
+---
+
 运行服务
 ```shell
 $ go fun server.go
