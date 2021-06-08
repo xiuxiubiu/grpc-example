@@ -1,0 +1,15 @@
+syntax = "proto3";
+package proto;
+option go_package="github.com/xiuxiubiu/grpc-example/load-balance/proto";
+
+service Balance {
+	rpc Call(CallRequest) returns (CallResponse) {}
+}
+
+message CallRequest {
+	int32 num = 1;
+}
+
+message CallResponse {
+	string message = 1;
+}
