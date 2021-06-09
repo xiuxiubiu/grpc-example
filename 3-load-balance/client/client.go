@@ -29,7 +29,7 @@ func main() {
 		"etcd:///test",
 		grpc.WithBlock(),
 		grpc.WithInsecure(),
-		grpc.WithDefaultServiceConfig(`{"loadBalancingPolicy": "weighted_round_robin"}`),
+		grpc.WithDefaultServiceConfig(`{"loadBalancingPolicy": "round_robin"}`),
 	)
 
 	if err != nil {
@@ -48,6 +48,7 @@ func main() {
 		}
 
 		fmt.Printf("call num: %d\n", i)
+		time.Sleep(4 * time.Second)
 	}
 }
 
